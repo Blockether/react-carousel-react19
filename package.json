@@ -1,14 +1,13 @@
 {
-	"name": "@trendyol-js/react-carousel",
+	"name": "@blockether/react-carousel-react19",
 	"version": "3.0.3",
 	"description": "Lightweight carousel component for react",
 	"main": "dist/cjs/index.js",
 	"module": "dist/es/index.js",
 	"jsnext:main": "dist/es/index.js",
 	"types": "dist/types/index.d.ts",
-	"homepage": "https://trendyol.github.io/react-carousel",
-	"repository": "github:Trendyol/react-carousel",
-	"bugs": "https://github.com/Trendyol/react-carousel/issues",
+	"homepage": "https://github.com/Blockether/react-carousel-react19",
+	"repository": "github:Blockether/react-carousel-react19",
 	"scripts": {
 		"build": "rollup -c --environment BUILD:production",
 		"dev": "rollup -c -w --environment BUILD:development",
@@ -17,7 +16,11 @@
 		"lint:fix": "tslint -t verbose -c tslint.json --fix 'src/**/*.{ts,tsx}'",
 		"lint:staged": "pretty-quick --staged && lint-staged",
 		"test": "jest",
-		"security": "npm audit"
+		"security": "npm audit",
+		"release": "pnpm publish --access public",
+		"release:patch": "npm version patch && npm run release",
+		"release:minor": "npm version minor && npm run release",
+		"release:major": "npm version major && npm run release"
 	},
 	"lint-staged": {
 		"*.{ts,tsx}": "npm run fmt"
@@ -38,7 +41,7 @@
 	],
 	"license": "MIT",
 	"peerDependencies": {
-		"react": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0"
+		"react": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^15.0.0",
